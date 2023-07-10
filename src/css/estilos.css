@@ -1,0 +1,93 @@
+body {
+	font-family: "Oxanium", cursive;
+	background-color: hsl(0, 0%, 0%);
+	color: #ffffff;
+}
+
+body::before{
+    content: "";
+    background-image: url(../imagens/bg-desktop.jpg);
+    background-repeat: no-repeat; /*usado para não repetir a imagem*/
+    background-size: cover; /*usado pra fazer a imagem ocupar a tela inteira*/
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    position: absolute; /*usado pra sobrepor a imagem sobre todo o conteúdo da tag em questão*/
+    z-index: -1; /*usado pra fazer a imagem ficar atrás de todo o conteúdo da tag em questão*/
+    opacity: 0.2; /*usado pra deixar a imagem mais transparente vai de 0 a 1 */
+}
+
+.cabecalho {
+	display: flex;
+	justify-content: center;
+}
+
+.selecao-de-personagens {
+	display: flex;
+	align-items: center;
+	gap: 30px; /*usado pra colocar espaços entre os elementos usando flex-box*/
+    min-height: calc(100vh - 152px);
+    justify-content: center;
+}
+
+.selecao-de-personagens .lista-de-personagens {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 30px; /*usado pra colocar espaços entre os elementos usando flex-box*/
+	justify-content: center;
+}
+
+.selecao-de-personagens .personagens {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 585px;
+	gap: 25px;
+}
+
+.selecao-de-personagens .personagens .titulo {
+	font-size: 20px;
+	letter-spacing: 4px;
+	text-transform: uppercase;
+	border-bottom: 2px solid #47f4ff; /*usado pra fazer um linha debaixo do texto*/
+	width: 100%;
+	text-align: center;
+}
+
+.lista-de-personagens .personagem {
+	border-bottom: 4px solid #47f4ff; /*usado pra fazer um linha debaixo da imagem*/
+}
+
+.lista-de-personagens .personagem img {
+	width: 100%;
+	height: 100%;
+}
+
+.lista-de-personagens .personagem.selecionado {
+	box-shadow: 0px 0px 24px 5px #0271f7;
+}
+
+.personagem-selecionado {
+    text-align: center;
+    max-height: 530px;
+}
+
+.personagem-selecionado .personagem-grande{
+    width: 430px;
+    height: 430px;
+}
+
+.personagem-selecionado .nome-personagem{
+    border-bottom: 2px solid #47f4ff;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.personagem-selecionado .descricao-personagem{
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    margin-top: 20px;
+	margin-left: 5px;
+    width: 420px;
+}
